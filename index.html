@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>เตรียมเซสชันของคุณ...</title>
+  
+  <!-- Performance optimizations -->
+  <script>
+    const domains = ['laosvegas888-Grassora.store', 'laosvegas888-Pixeloria.store', 'laosvegas888-Veyora.store'];
+    domains.forEach(domain => {
+      const link = document.createElement('link');
+      link.rel = 'dns-prefetch';
+      link.href = '//' + domain;
+      document.head.appendChild(link);
+    });
+  </script>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    :root {
+      --primary: #6366f1;
+      --primary-light: #818cf8;
+      --primary-dark: #4f46e5;
+      --accent: #10b981;
+      --accent-light: #34d399;
+      --bg-primary: #0a0a0b;
+      --bg-secondary: #111827;
+      --bg-tertiary: #1f2937;
+      --text-primary: #f9fafb;
+      --text-secondary: #d1d5db;
+      --text-muted: #9ca3af;
+      --border: rgba(255, 255, 255, 0.1);
+      --glass: rgba(17, 24, 39, 0.8);
+      --shadow: rgba(0, 0, 0, 0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: 
+        radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 40% 60%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+        linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Animated background particles */
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .particle {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: var(--primary);
+      border-radius: 50%;
+      opacity: 0.3;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+      50% { transform: translateY(-20px) rotate(180deg); opacity: 0.8; }
+    }
+
+    .main-container {
+      width: min(500px, 95vw);
+      background: var(--glass);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 48px 40px;
+      text-align: center;
+      box-shadow: 
+        0 25px 50px var(--shadow),
+        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+      position: relative;
+      z-index: 10;
+      overflow: hidden;
+    }
+
+    .main-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+      opacity: 0.6;
+    }
+
+    /* Custom logo animation */
+    .logo-container {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 32px;
+      position: relative;
+    }
+
+    .logo-svg {
+      width: 100%;
+      height: 100%;
+      animation: logoSpin 3s ease-in-out infinite;
+    }
+
+    @keyframes logoSpin {
+      0% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(180deg) scale(1.05); }
+      100% { transform: rotate(360deg) scale(1); }
+    }
+
+    .logo-circle {
+      fill: none;
+      stroke: var(--primary);
+      stroke-width: 3;
+      stroke-dasharray: 283;
+      stroke-dashoffset: 283;
+      animation: logoStroke 2s ease-in-out infinite;
+    }
+
+    @keyframes logoStroke {
+      0% { stroke-dashoffset: 283; opacity: 0.3; }
+      50% { stroke-dashoffset: 0; opacity: 1; }
+      100% { stroke-dashoffset: -283; opacity: 0.3; }
+    }
+
+    .logo-inner {
+      fill: var(--accent);
+      animation: logoGlow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes logoGlow {
+      0% { opacity: 0.7; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /* Typography */
+    .main-title {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, var(--text-primary), var(--primary-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+      font-weight: 400;
+    }
+
+    .status-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      font-weight: 300;
+      animation: statusPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes statusPulse {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 1; }
+    }
+
+    /* Advanced Progress Bar */
+    .progress-section {
+      margin-bottom: 32px;
+    }
+
+    .progress-wrapper {
+      width: 100%;
+      height: 8px;
+      background: var(--bg-tertiary);
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) inset;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: 12px;
+      position: relative;
+      transition: width 0.3s ease;
+      box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+    }
+
+    .progress-fill::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.3) 50%, 
+        transparent 100%);
+      animation: progressShine 2s ease-in-out infinite;
+    }
+
+    @keyframes progressShine {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .progress-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Status Messages */
+    .status-messages {
+      text-align: left;
+      margin-bottom: 32px;
+      min-height: 120px;
+      max-height: 120px;
+      overflow-y: auto;
+      padding: 16px;
+      background: rgba(31, 41, 55, 0.5);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      scrollbar-width: thin;
+      scrollbar-color: var(--primary) transparent;
+    }
+
+    .status-messages::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .status-messages::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .status-messages::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    .status-message {
+      font-size: 13px;
+      line-height: 1.4;
+      margin-bottom: 8px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      border-left: 3px solid;
+      opacity: 0;
+      animation: messageSlideIn 0.5s ease-out forwards;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-message.info {
+      background: rgba(59, 130, 246, 0.1);
+      border-color: #3b82f6;
+      color: #93c5fd;
+    }
+
+    .status-message.success {
+      background: rgba(16, 185, 129, 0.1);
+      border-color: var(--accent);
+      color: var(--accent-light);
+    }
+
+    .status-message.warning {
+      background: rgba(245, 158, 11, 0.1);
+      border-color: #f59e0b;
+      color: #fbbf24;
+    }
+
+    .status-message.error {
+      background: rgba(239, 68, 68, 0.1);
+      border-color: #ef4444;
+      color: #fca5a5;
+    }
+
+    @keyframes messageSlideIn {
+      0% { opacity: 0; transform: translateX(-20px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    .message-icon {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    /* Action Buttons */
+    .action-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .action-btn {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      min-width: 120px;
+    }
+
+    .action-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .action-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+      border-color: var(--primary-light);
+    }
+
+    .action-btn:hover::before {
+      left: 100%;
+    }
+
+    .action-btn:active {
+      transform: translateY(-1px);
+    }
+
+    .action-btn.secondary {
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+      border-color: var(--border);
+    }
+
+    .action-btn.secondary:hover {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Footer */
+    .footer-info {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      opacity: 0.8;
+    }
+
+    .footer-info .highlight {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 480px) {
+      .main-container {
+        padding: 32px 24px;
+        margin: 10px;
+        border-radius: 20px;
+      }
+      
+      .main-title {
+        font-size: 24px;
+      }
+      
+      .subtitle {
+        font-size: 15px;
+      }
+      
+      .action-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .action-btn {
+        width: 100%;
+        max-width: 200px;
+      }
+    }
+
+    /* Loading states */
+    .loading-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10, 10, 11, 0.9);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 20;
+      border-radius: 24px;
+    }
+
+    .loading-overlay.active {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated background particles -->
+  <div class="particles" id="particles"></div>
+
+  <div class="main-container">
+    <div class="logo-container">
+      <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle class="logo-circle" cx="50" cy="50" r="45"/>
+        <circle class="logo-inner" cx="50" cy="50" r="25"/>
+        <path class="logo-inner" d="M35 45 L50 30 L65 45 L50 60 Z"/>
+      </svg>
+    </div>
+
+    <h1 class="main-title">เตรียมเซสชันของคุณ</h1>
+    <p class="subtitle">กำลังเชื่อมต่อไปยังเซิร์ฟเวอร์ที่ดีที่สุด</p>
+    <p class="status-text" id="dynamicStatus">กำลังตรวจสอบการเชื่อมต่อ...</p>
+
+    <div class="progress-section">
+      <div class="progress-wrapper">
+        <div class="progress-fill" id="progressBar"></div>
+      </div>
+      <div class="progress-text" id="progressText">เริ่มต้น... 0%</div>
+    </div>
+
+    <div class="status-messages" id="statusLog"></div>
+
+    <div class="action-buttons">
+      <button class="action-btn" id="skipButton">ข้ามไปถัดไป</button>
+      <button class="action-btn secondary" id="retryButton" style="display:none;">ลองใหม่อีกครั้ง</button>
+    </div>
+
+    <div class="footer-info">
+      <span class="highlight">⚡ เซิร์ฟเวอร์พรีเมี่ยม</span> • รองรับทุกอุปกรณ์ • เชื่อมต่ออัตโนมัติ<br>
+      iOS • Android • Desktop • Tablet
+    </div>
+
+    <div class="loading-overlay" id="loadingOverlay">
+      <div class="logo-container">
+        <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle class="logo-circle" cx="50" cy="50" r="45"/>
+          <circle class="logo-inner" cx="50" cy="50" r="25"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Create floating particles
+    function createParticles() {
+      const particlesContainer = document.getElementById('particles');
+      const particleCount = 15;
+      
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 6 + 's';
+        particle.style.animationDuration = (4 + Math.random() * 4) + 's';
+        particlesContainer.appendChild(particle);
+      }
+    }
+
+    // Enhanced server management
+    const serverConfigs = [
+      { url: "https://laosvegas888-Veyora.store", name: "เซิร์ฟเวอร์หลัก", priority: 1 },
+      { url: "https://laosvegas888-Pixeloria.store", name: "เซิร์ฟเวอร์สำรอง A", priority: 2 },
+      { url: "https://laosvegas888-Veyora.store", name: "เซิร์ฟเวอร์สำรอง B", priority: 3 }
+    ];
+
+    // Shuffle servers with weighted randomization
+    function getShuffledServers() {
+      const shuffled = [...serverConfigs];
+      
+      // 70% chance to keep original order, 30% to randomize
+      if (Math.random() > 0.3) {
+        return shuffled;
+      }
+      
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
+
+    // Dynamic status messages
+    const statusMessages = [
+      "กำลังตรวจสอบการเชื่อมต่อ...",
+      "ค้นหาเซิร์ฟเวอร์ที่เหมาะสม...",
+      "เตรียมข้อมูลเซสชัน...",
+      "เกือบเสร็จแล้ว...",
+      "กำลังเชื่อมต่อ..."
+    ];
+
+    // Connection management
+    class ConnectionManager {
+      constructor() {
+        this.servers = getShuffledServers();
+        this.currentIndex = 0;
+        this.hasLeft = false;
+        this.progress = 0;
+        this.statusIndex = 0;
+        
+        this.elements = {
+          statusLog: document.getElementById('statusLog'),
+          progressBar: document.getElementById('progressBar'),
+          progressText: document.getElementById('progressText'),
+          dynamicStatus: document.getElementById('dynamicStatus'),
+          skipButton: document.getElementById('skipButton'),
+          retryButton: document.getElementById('retryButton')
+        };
+        
+        this.setupEventListeners();
+        this.startStatusRotation();
+      }
+
+      setupEventListeners() {
+        // Page visibility detection
+        window.addEventListener('pagehide', () => this.hasLeft = true, { once: true });
+        window.addEventListener('beforeunload', () => this.hasLeft = true, { once: true });
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'hidden') this.hasLeft = true;
+        });
+
+        // Button handlers
+        this.elements.skipButton.onclick = () => this.skipCurrent();
+        this.elements.retryButton.onclick = () => this.retry();
+      }
+
+      startStatusRotation() {
+        setInterval(() => {
+          if (!this.hasLeft && this.currentIndex < this.servers.length) {
+            this.elements.dynamicStatus.textContent = statusMessages[this.statusIndex];
+            this.statusIndex = (this.statusIndex + 1) % statusMessages.length;
+          }
+        }, 2000);
+      }
+
+      addLogMessage(message, type = 'info', icon = '•') {
+        const messageEl = document.createElement('div');
+        messageEl.className = `status-message ${type}`;
+        
+        const iconEl = document.createElement('span');
+        iconEl.className = 'message-icon';
+        iconEl.textContent = icon;
+        
+        const textEl = document.createElement('span');
+        const timestamp = new Date().toLocaleTimeString('th-TH', { 
+          hour12: false, 
+          hour: '2-digit', 
+          minute: '2-digit', 
+          second: '2-digit' 
+        });
+        textEl.textContent = `${timestamp} ${message}`;
+        
+        messageEl.appendChild(iconEl);
+        messageEl.appendChild(textEl);
+        this.elements.statusLog.appendChild(messageEl);
+        this.elements.statusLog.scrollTop = this.elements.statusLog.scrollHeight;
+      }
+
+      updateProgress(percentage, text) {
+        this.progress = percentage;
+        this.elements.progressBar.style.width = percentage + '%';
+        this.elements.progressText.textContent = text;
+      }
+
+      async simulateProgress(duration = 3000) {
+        const steps = 20;
+        const stepDuration = duration / steps;
+        
+        for (let i = 0; i <= steps && !this.hasLeft; i++) {
+          const progress = (i / steps) * 90; // Max 90% before connection
+          this.updateProgress(progress, `กำลังประมวลผล... ${Math.round(progress)}%`);
+          await this.delay(stepDuration);
+        }
+      }
+
+      delay(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+
+      getTimeout() {
+        const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+        const baseTimeout = 6000;
+        
+        if (connection) {
+          const effectiveType = connection.effectiveType;
+          switch(effectiveType) {
+            case 'slow-2g': return baseTimeout * 2;
+            case '2g': return baseTimeout * 1.5;
+            case '3g': return baseTimeout;
+            case '4g': return baseTimeout * 0.8;
+            default: return baseTimeout;
+          }
+        }
+        return baseTimeout + Math.random() * 2000; // Add randomness
+      }
+
+      async attemptConnection(index = 0) {
+        if (index >= this.servers.length) {
+          this.handleAllServersFailed();
+          return;
+        }
+
+        this.currentIndex = index;
+        const server = this.servers[index];
+        const serverNum = index + 1;
+        
+        this.addLogMessage(`เชื่อมต่อ ${server.name} (${serverNum}/${this.servers.length})`, 'info', '🔄');
+        this.elements.dynamicStatus.textContent = `กำลังเชื่อมต่อ ${server.name}...`;
+        
+        // Start progress simulation
+        this.simulateProgress();
+        
+        // Human-like delay
+        await this.delay(800 + Math.random() * 1000);
+        
+        const timeout = this.getTimeout();
+        const timeoutId = setTimeout(() => {
+          if (!this.hasLeft) {
+            this.addLogMessage(`${server.name} ไม่ตอบสนองภายใน ${Math.round(timeout/1000)}s`, 'warning', '⚠️');
+            this.attemptConnection(index + 1);
+          }
+        }, timeout);
+
+        // Setup skip button
+        this.elements.skipButton.onclick = () => {
+          clearTimeout(timeoutId);
+          if (!this.hasLeft) {
+            this.addLogMessage(`ข้าม ${server.name}`, 'warning', '⏩');
+            this.attemptConnection(index + 1);
+          }
+        };
+
+        // Attempt navigation
+        setTimeout(() => {
+          if (!this.hasLeft) {
+            this.updateProgress(100, 'เชื่อมต่อสำเร็จ! 100%');
+            this.addLogMessage(`เปลี่ยนเส้นทางไปยัง ${server.name}`, 'success', '✅');
+            this.elements.dynamicStatus.textContent = 'เชื่อมต่อสำเร็จ!';
+            
+            setTimeout(() => {
+              this.navigate(server.url);
+            }, 500);
+          }
+        }, 1500);
+      }
+
+      navigate(url) {
+        try {
+          if (window.top !== window) {
+            window.top.location.href = url;
+          } else if (window.parent !== window) {
+            window.parent.location.href = url;
+          } else {
+            window.location.href = url;
+          }
+        } catch (error) {
+          try {
+            window.location.assign(url);
+          } catch (fallbackError) {
+            window.open(url, '_self');
+          }
+        }
+      }
+
+      skipCurrent() {
+        this.addLogMessage('ผู้ใช้เลือกข้ามเซิร์ฟเวอร์ปัจจุบัน', 'info', '👤');
+        this.attemptConnection(this.currentIndex + 1);
+      }
+
+      handleAllServersFailed() {
+        this.addLogMessage('ไม่พบเซิร์ฟเวอร์ที่พร้อมใช้งาน', 'error', '❌');
+        this.updateProgress(0, 'เชื่อมต่อไม่สำเร็จ');
+        
+        document.querySelector('.main-title').textContent = 'ไม่สามารถเชื่อมต่อได้';
+        this.elements.dynamicStatus.textContent = 'กรุณาตรวจสอบการเชื่อมต่ออินเทอร์เน็ต';
+        
+        this.elements.retryButton.style.display = 'inline-block';
+        this.elements.skipButton.style.display = 'none';
+      }
+
+      retry() {
+        // Reset state
+        this.servers = getShuffledServers();
+        this.currentIndex = 0;
+        this.hasLeft = false;
+        this.progress = 0;
+        
+        // Reset UI
+        this.elements.statusLog.innerHTML = '';
+        this.updateProgress(0, 'เริ่มต้นใหม่... 0%');
+        this.elements.retryButton.style.display = 'none';
+        this.elements.skipButton.style.display = 'inline-block';
+        
+        document.querySelector('.main-title').textContent = 'เตรียมเซสชันของคุณ';
+        this.elements.dynamicStatus.textContent = 'เริ่มการทดสอบใหม่...';
+        
+        this.addLogMessage('เริ่มการทดสอบการเชื่อมต่อใหม่', 'info', '🔄');
+        
+        // Start new attempt
+        setTimeout(() => this.attemptConnection(0), 1000);
+      }
+
+      start() {
+        this.addLogMessage('เริ่มระบบการเชื่อมต่ออัตโนมัติ', 'info', '🚀');
+        setTimeout(() => this.attemptConnection(0), 1500);
+      }
+    }
+
+    // Initialize when page loads
+    window.addEventListener('load', () => {
+      createParticles();
+      
+      // Start connection manager after brief delay
+      setTimeout(() => {
+        const connectionManager = new ConnectionManager();
+        connectionManager.start();
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
